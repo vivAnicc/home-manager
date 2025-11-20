@@ -2,6 +2,7 @@
 
 {
   home.sessionVariables.TERMINAL = "ghostty";
+  xdg.terminal-exec.settings.default = [ "com.mitchellh.ghostty.desktop" ];
 
   programs.ghostty = {
     enable = true;

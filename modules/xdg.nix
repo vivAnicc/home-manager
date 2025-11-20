@@ -1,5 +1,8 @@
 { ... }:
 
 {
-  xdg.enable = true;
+  xdg = {
+    enable = true;
+    terminal-exec.enable = true;
+  };
 }
