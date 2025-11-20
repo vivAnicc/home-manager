@@ -21,7 +21,7 @@
     inputs.zen-browser.packages."${pkgs.stdenv.hostPlatform.system}".default
 
     # Fix xdg-open trying to use "x-terminal-emulator" to open terminals
-    (pkgs.writeShellScriptBin "x-terminal-emulator" "ghostty $@")
+    # (pkgs.writeShellScriptBin "x-terminal-emulator" "ghostty $@")
     (pkgs.writeShellScriptBin "explore-script" ''
      fish -c '
         set -l choosen (choose-dir ~)

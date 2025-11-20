@@ -8,6 +8,8 @@ let
 		lib.isDerivation
 		parsers;
 in {
+  xdg.mimeApps.defaultApplicationPackages = [ pkgs.neovim ];
+
 	imports = [
 		inputs.nixvim.homeModules.nixvim
 	];
