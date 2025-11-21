@@ -167,16 +167,6 @@
         ];
       };
       
-# Ref https://wiki.hyprland.org/Configuring/Workspace-Rules/
-# "Smart gaps" / "No gaps when only"
-# uncomment all if you wish to use that.
-# workspace = w[tv1], gapsout:0, gapsin:0
-# workspace = f[1], gapsout:0, gapsin:0
-# windowrulev2 = bordersize 0, floating:0, onworkspace:w[tv1]
-# windowrulev2 = rounding 0, floating:0, onworkspace:w[tv1]
-# windowrulev2 = bordersize 0, floating:0, onworkspace:f[1]
-# windowrulev2 = rounding 0, floating:0, onworkspace:f[1]
-
       dwindle = {
         pseudotile = true; # Master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
         preserve_split = true; # You probably want this
@@ -212,11 +202,17 @@
         sensitivity = -0.5;
       };
 
-      windowrulev2 = [
-        "suppressevent maximize, class:.*"
-        "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
-        "noborder, onworkspace:w[t1]"
+      windowrule = [
+        "suppress_event maximise, match:class .*"
+        "no_focus on, match:class ^$, match:title ^$, match:xwayland 1, match:float 1, match:fullscreen 0, match:pin 0"
+        "border_size 0, match:workspace w[t1]"
       ];
+
+      # windowrulev2 = [
+      #   "suppressevent maximize, class:.*"
+      #   "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
+      #   "noborder, onworkspace:w[t1]"
+      # ];
 
       bindel = [
         ",XF86AudioRaiseVolume, exec, wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"
