@@ -51,8 +51,8 @@
   wayland.windowManager.hyprland = {
     systemd.variables = ["--all"];
     enable = true;
-    package = inputs.hyprland.packages.x86_64-linux.hyprland;
-    portalPackage = inputs.hyprland.packages.x86_64-linux.xdg-desktop-portal-hyprland;
+    package = null;
+    portalPackage = null;
 
     xwayland.enable = true;
 
@@ -203,9 +203,9 @@
       };
 
       windowrule = [
-        "suppress_event maximise, match:class .*"
-        "no_focus on, match:class ^$, match:title ^$, match:xwayland 1, match:float 1, match:fullscreen 0, match:pin 0"
-        "border_size 0, match:workspace w[t1]"
+        "match:class .*, suppress_event maximise"
+        "match:class ^$, match:title ^$, match:xwayland 1, match:float 1, match:fullscreen 0, match:pin 0, no_focus on"
+        "match:workspace w[t1], border_size 0"
       ];
 
       # windowrulev2 = [

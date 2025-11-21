@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ lib, pkgs, ... }:
 
 {
   qt = {
@@ -31,13 +31,13 @@
     };
   };
 
-  xdg.portal = {
-    enable = true;
-    extraPortals = [
-      pkgs.xdg-desktop-portal-gtk
-    ];
-    config.common.default = "*";
-  };
+  # xdg.portal = {
+  #   enable = lib.mkForce true;
+  #   extraPortals = [
+  #     pkgs.xdg-desktop-portal-gtk
+  #   ];
+  #   config.common.default = "*";
+  # };
 
   dbus.packages = [
     pkgs.dconf
