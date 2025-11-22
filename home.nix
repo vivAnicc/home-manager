@@ -37,6 +37,8 @@
     pkgs.wine
     pkgs.comma
     pkgs.evince
+    pkgs.prismlauncher
+    pkgs.yt-dlp
 
     inputs.copy-paste.packages.x86_64-linux.default
   ];
