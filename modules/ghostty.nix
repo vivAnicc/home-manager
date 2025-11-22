@@ -7,7 +7,7 @@
   programs.ghostty = {
     enable = true;
     package = inputs.ghostty.packages.x86_64-linux.default;
-    systemd.enable = true;
+    # systemd.enable = true;
 
     enableFishIntegration = true;
     settings = {
