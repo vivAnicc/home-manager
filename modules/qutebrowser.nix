@@ -1,4 +1,4 @@
-{ pkgs, unfree-pkgs, ... }:
+{ pkgs, ... }:
 
 {
   home.packages = [
@@ -17,16 +17,8 @@
     theme = "Arc-Dark";
   };
 
-  programs.qutebrowser = let
-    qutebrowser = unfree-pkgs.qutebrowser.override {
-      enableWideVine = true;
-    };
-    # // {
-    #   buildInputs = unfree-pkgs.qutebrowser.buildInputs ++ [ pkgs.keyutils ];
-    # };
-  in {
+  programs.qutebrowser = {
     enable = true;
-    package = qutebrowser;
 
     extraConfig = #python
     ''

@@ -51,8 +51,8 @@
   wayland.windowManager.hyprland = {
     systemd.variables = ["--all"];
     enable = true;
-    package = null;
-    portalPackage = null;
+    package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+    portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
 
     xwayland.enable = true;
 
@@ -261,7 +261,7 @@
         # "SUPER, p, exec, fish -c 'term bwp'"
         # "SUPER, a, exec, fish -c 'term bwa'"
 
-        "SUPER, c, exec, rofi -show run"
+        "SUPER, c, exec, nordvpn countries | tr -s ' ' '\\n' | sed 's/$/\\nnone/' | sort | uniq | wofi -d -i | xargs nordvpn connect"
 
         "SUPER, Backspace, exec, hyprlock"
 

@@ -25,8 +25,17 @@
     modules/wofi.nix
     modules/xdg.nix
     modules/zellij.nix
-    modules/zig.nix
+    # modules/zig.nix
   ];
+
+  targets.genericLinux = {
+    enable = true;
+    gpu.nvidia = {
+      enable = true;
+      version = "580.105.08";
+      sha256 = "sha256-2cboGIZy8+t03QTPpp3VhHn6HQFiyMKMjRdiV2MpNHU=";
+    };
+  };
 
   home.packages = [
     pkgs.file
@@ -39,6 +48,7 @@
     pkgs.evince
     pkgs.prismlauncher
     pkgs.yt-dlp
+    pkgs.nix
 
     inputs.copy-paste.packages.x86_64-linux.default
   ];
@@ -47,6 +57,6 @@
 
   home.username = "nick";
   home.homeDirectory = "/home/nick";
-  home.stateVersion = "25.05";
+  home.stateVersion = "25.11";
   programs.home-manager.enable = true;
 }

@@ -6,8 +6,8 @@
     backupNotification = true;
 
     settings = {
-      backup.path = "/mnt/drive/ludusavi-backup";
-      restore.path = "/mnt/drive/ludusavi-backup";
+      backup.path = "/mnt/ludusavi-backup";
+      restore.path = "/mnt/ludusavi-backup";
 
       roots = [
         {

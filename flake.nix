@@ -12,6 +12,11 @@
       url = "github:ghostty-org/ghostty";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    hyprland = {
+      url = "github:hyprwm/Hyprland";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     
     zen-browser = {
       url = "github:youwen5/zen-browser-flake";
@@ -55,10 +60,12 @@
     { nixpkgs, home-manager, ... }@inputs:
     let
       system = "x86_64-linux";
-      pkgs = import nixpkgs {inherit system;};
-      unfree-pkgs = import nixpkgs {
+      pkgs = import nixpkgs {
         inherit system;
-        config.allowUnfree = true;
+        config = {
+          allowUnfree = true;
+          nvidia.acceptLicense = true;
+        };
       };
     in
     {
@@ -67,7 +74,7 @@
 
         modules = [ ./home.nix ];
 
-        extraSpecialArgs = {inherit inputs unfree-pkgs;};
+        extraSpecialArgs = {inherit inputs;};
       };
     };
 }
