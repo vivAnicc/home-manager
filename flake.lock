@@ -1041,11 +1041,11 @@
         "nixvim": "nixvim_2"
       },
       "locked": {
-        "lastModified": 1765839038,
-        "narHash": "sha256-zMnw9zDp/RAfQZTMzu2vy7GAaL1NqVqRY8P0DjmudDQ=",
+        "lastModified": 1765840562,
+        "narHash": "sha256-icB5R5CIwYliy4SOeZr4CLDAknS1KR5tl8wzk3ebfoM=",
         "owner": "vivAnicc",
         "repo": "nix-utils",
-        "rev": "23b5776894ed9a5fc62b04913c55ed36b7359501",
+        "rev": "9c9906df46e4ee8e53460d2227bcbde097c4433d",
         "type": "github"
       },
       "original": {
