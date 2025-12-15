@@ -50,7 +50,7 @@
     pkgs.yt-dlp
     pkgs.nix
 
-    inputs.copy-paste.packages.x86_64-linux.default
+    inputs.copy-paste.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
   home.file."games".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.local/share/Steam/steamapps/common";

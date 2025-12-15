@@ -1,4 +1,4 @@
-{ inputs, ... }:
+{ inputs, pkgs, ... }:
 
 {
   home.sessionVariables.TERMINAL = "ghostty";
@@ -6,7 +6,7 @@
 
   programs.ghostty = {
     enable = true;
-    package = inputs.ghostty.packages.x86_64-linux.default;
+    package = inputs.ghostty.packages.${pkgs.stdenv.hostPlatform.system}.default;
     # systemd.enable = true;
 
     enableFishIntegration = true;

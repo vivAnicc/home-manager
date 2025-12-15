@@ -3,8 +3,7 @@
 {
   home.packages = [
     pkgs.typst
-    pkgs.tinymist
   ];
-
-	programs.nixvim.lsp.servers.tinymist.enable = true;
+  
+  # The lsp is installed in nvim.nix
 }

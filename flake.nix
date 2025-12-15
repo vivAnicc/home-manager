@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    utils.url = "github:vivAnicc/nix-utils";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -40,10 +41,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     
-    nixvim = {
-      url = "github:nix-community/nixvim";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # nixvim = {
+    #   url = "github:nix-community/nixvim";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
     
     needlelight = {
       url = "github:vivAnicc/needlelight-flake";
@@ -57,7 +58,7 @@
   };
 
   outputs =
-    { nixpkgs, home-manager, ... }@inputs:
+    { nixpkgs, home-manager, utils, ... }@inputs: 
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs {
@@ -74,7 +75,7 @@
 
         modules = [ ./home.nix ];
 
-        extraSpecialArgs = {inherit inputs;};
+        extraSpecialArgs = {inherit inputs utils;};
       };
     };
 }
