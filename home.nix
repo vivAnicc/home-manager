@@ -32,8 +32,8 @@
     enable = true;
     gpu.nvidia = {
       enable = true;
-      version = "580.105.08";
-      sha256 = "sha256-2cboGIZy8+t03QTPpp3VhHn6HQFiyMKMjRdiV2MpNHU=";
+      version = "580.119.02";
+      sha256 = "sha256-gCD139PuiK7no4mQ0MPSr+VHUemhcLqerdfqZwE47Nc=";
     };
   };
 
