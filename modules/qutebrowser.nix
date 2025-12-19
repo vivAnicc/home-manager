@@ -19,12 +19,12 @@
 
   programs.qutebrowser = {
     enable = true;
-    package = pkgs.qutebrowser.overrideAttrs {
-      postInstall = # bash
-      ''
-        rm $out/share/applications/org.qutebrowser.qutebrowser.desktop
-      '';
-    };
+    # package = pkgs.qutebrowser.overrideAttrs {
+    #   postInstall = # bash
+    #   ''
+    #     rm $out/share/applications/org.qutebrowser.qutebrowser.desktop
+    #   '';
+    # };
 
     extraConfig = #python
     ''
