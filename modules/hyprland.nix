@@ -1,9 +1,11 @@
-{ inputs, pkgs, ... }:
+{ inputs, pkgs, lib, ... }:
 
 {
   imports = [
     ./hyprpaper.nix
   ];
+
+  # xdg.desktopEntries."zen.desktop".mimeType = lib.mkForce null;
 
   # This shouldn't be here
   home.packages = [
@@ -18,12 +20,12 @@
     pkgs.qt6Packages.qt6ct
     pkgs.wl-clipboard
 
-    (inputs.zen-browser.packages."${pkgs.stdenv.hostPlatform.system}".default.overrideAttrs {
-      postInstall = # bash
+    (inputs.zen-browser.packages."${pkgs.stdenv.hostPlatform.system}".default.overrideAttrs (prev: {
+      buildCommand = prev.buildCommand + # bash
       ''
         rm $out/share/applications/zen.desktop
       '';
-    })
+    }))
 
     # Fix xdg-open trying to use "x-terminal-emulator" to open terminals
     # (pkgs.writeShellScriptBin "x-terminal-emulator" "ghostty $@")
