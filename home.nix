@@ -28,15 +28,15 @@
     # modules/zig.nix
   ];
 
-  targets.genericLinux.enable = true;
-#  targets.genericLinux = {
-#    enable = true;
-#    gpu.nvidia = {
-#      enable = true;
-#      version = "580.119.02";
-#      sha256 = "sha256-gCD139PuiK7no4mQ0MPSr+VHUemhcLqerdfqZwE47Nc=";
-#    };
-#  };
+  # targets.genericLinux.enable = true;
+  targets.genericLinux = {
+    enable = true;
+    gpu.nvidia = {
+      enable = true;
+      version = "580.119.02";
+      sha256 = "sha256-gCD139PuiK7no4mQ0MPSr+VHUemhcLqerdfqZwE47Nc=";
+    };
+  };
 
   home.packages = [
     pkgs.file
