@@ -685,27 +685,6 @@
         "type": "github"
       }
     },
-    "needlelight": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ],
-        "utils": "utils_2"
-      },
-      "locked": {
-        "lastModified": 1759002757,
-        "narHash": "sha256-dAJzTeSQVS7Lw/ySP8x7L7ydU4Uk3xDqz1Rl4Kuq0tQ=",
-        "owner": "vivAnicc",
-        "repo": "needlelight-flake",
-        "rev": "c7364780551ab4f63719803c89e7a914b624fdc5",
-        "type": "github"
-      },
-      "original": {
-        "owner": "vivAnicc",
-        "repo": "needlelight-flake",
-        "type": "github"
-      }
-    },
     "neovim": {
       "inputs": {
         "nixpkgs": [
@@ -713,7 +692,7 @@
           "nixpkgs"
         ],
         "nixvim": "nixvim",
-        "utils": "utils_4"
+        "utils": "utils_3"
       },
       "locked": {
         "lastModified": 1765838218,
@@ -901,10 +880,9 @@
         "ghostty": "ghostty",
         "home-manager": "home-manager_2",
         "hyprland": "hyprland",
-        "needlelight": "needlelight",
         "nix-your-shell": "nix-your-shell",
         "nixpkgs": "nixpkgs",
-        "utils": "utils_3",
+        "utils": "utils_2",
         "zen-browser": "zen-browser",
         "zig": "zig_2",
         "zls": "zls"
@@ -1038,27 +1016,6 @@
     },
     "utils_2": {
       "inputs": {
-        "nixpkgs": [
-          "needlelight",
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1758190880,
-        "narHash": "sha256-Hj9M8IiiZT9YmOuQdkWQdYPLDE5qkUabGz+gZP628S8=",
-        "owner": "vivAnicc",
-        "repo": "nix-utils",
-        "rev": "1f59cfa39cc03376df145538a5cf9eb9dc8e1066",
-        "type": "github"
-      },
-      "original": {
-        "owner": "vivAnicc",
-        "repo": "nix-utils",
-        "type": "github"
-      }
-    },
-    "utils_3": {
-      "inputs": {
         "neovim": "neovim",
         "nixpkgs": "nixpkgs_3",
         "nixvim": "nixvim_2"
@@ -1077,7 +1034,7 @@
         "type": "github"
       }
     },
-    "utils_4": {
+    "utils_3": {
       "inputs": {
         "nixpkgs": [
           "utils",
