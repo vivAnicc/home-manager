@@ -262,7 +262,7 @@
 
         "SUPER_SHIFT, q, exit,"
 
-        "SUPER, r, exec, set-wallpaper silksong && killall .waybar-wrapped && waybar"
+        # "SUPER, r, exec, set-wallpaper silksong && killall .waybar-wrapped && waybar"
 
         "SUPER, f11, fullscreen"
 
