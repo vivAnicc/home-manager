@@ -17,6 +17,7 @@
     modules/hypridle.nix
     modules/hyprland.nix
     modules/hyprpaper.nix
+    modules/xdg.nix
   ];
 
   # targets.genericLinux.enable = true;
