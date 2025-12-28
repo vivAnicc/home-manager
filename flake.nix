@@ -65,12 +65,22 @@
       };
     in
     {
-      homeConfigurations."nick" = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
+      homeConfigurations = {
+        nick = home-manager.lib.homeManagerConfiguration {
+          inherit pkgs;
 
-        modules = [ ./home.nix ];
+          modules = [ ./home.nix ];
 
-        extraSpecialArgs = {inherit inputs utils;};
+          extraSpecialArgs = {inherit inputs utils;};
+        };
+
+        mcsr = home-manager.lib.homeManagerConfiguration {
+          inherit pkgs;
+
+          moduls = [ ./mcsr.nix ];
+
+          extraSpecialArgs = {inherit inputs utils;};
+        };
       };
     };
 }
