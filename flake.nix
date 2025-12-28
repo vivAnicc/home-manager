@@ -77,7 +77,7 @@
         mcsr = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
 
-          moduls = [ ./mcsr.nix ];
+          modules = [ ./mcsr.nix ];
 
           extraSpecialArgs = {inherit inputs utils;};
         };
