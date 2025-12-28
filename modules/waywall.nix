@@ -26,14 +26,14 @@ local remapped_kb = {
 }
 
 -- ==== SENSITIVITIES ====
-local normal_sens = 1
-local tall_sens = 0.1
+local normal_sens = 12.8000006
+local tall_sens = 0.86348038
 
 
 -- ==== PATHS ====
 local home_path = os.getenv("HOME") .. "/"
-local pacem_path = home_path .. "mcsr/paceman-tracker-0.7.0.jar"
-local nb_path = home_path .. "mcsr/Ninjabrain-Bot-1.5.1.jar"
+local pacem_path = home_path .. "paceman-tracker-0.7.0.jar"
+local nb_path = home_path .. "Ninjabrain-Bot-1.5.1.jar"
 -- local overlay_path = home_path .. "mcsr/measuring_overlay.png"
 local overlay_path = home_path .. "${../config/waywall/measuring_overlay.png}"
 
