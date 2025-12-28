@@ -5,7 +5,7 @@
     pkgs.waywall
   ];
 
-  xdg.configFile.text = # lua
+  xdg.configFile."waywall/init.lua".text = # lua
   ''
 -- ==== IMPORTS ====
 local waywall = require("waywall")
@@ -163,7 +163,7 @@ local resolutions = {
 -- ==== CONFIG ====
 local config = {
     input = {
-        layout = "us",
+        layout = "it",
         repeat_rate = 40,
         repeat_delay = 300,
         remaps = remapped_kb,
