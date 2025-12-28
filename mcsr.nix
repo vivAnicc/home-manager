@@ -13,6 +13,10 @@
     modules/ssh.nix
     modules/themes.nix
     modules/thunar.nix
+
+    modules/hypridle.nix
+    modules/hyprland.nix
+    modules/hyprpaper.nix
   ];
 
   # targets.genericLinux.enable = true;
