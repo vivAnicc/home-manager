@@ -1,4 +1,4 @@
-{ inputs, pkgs, lib, ... }:
+{ inputs, pkgs, ... }:
 
 {
   imports = [
@@ -19,6 +19,7 @@
     pkgs.libsForQt5.qt5ct
     pkgs.qt6Packages.qt6ct
     pkgs.wl-clipboard
+    pkgs.jq
 
     inputs.zen-browser.packages."${pkgs.stdenv.hostPlatform.system}".default
     # (inputs.zen-browser.packages."${pkgs.stdenv.hostPlatform.system}".default.overrideAttrs (prev: {
@@ -240,6 +241,10 @@
         ", XF86AudioPrev, exec, playerctl previous"
       ];
 
+      bindn = [
+        ", r, sendshortcut, f3, title:Minecraft"
+      ];
+
       bindm = [
         "SUPER, mouse:272, movewindow"
         "SUPER, mouse:273, resizewindow"
@@ -253,6 +258,9 @@
       ];
 
       bind = [
+        "SUPER, mouse_down, exec, hyprctl -q keyword cursor:zoom_factor $(hyprctl getoption cursor:zoom_factor -j | jq '.float * 1.5')"
+        "SUPER, mouse_up, exec, hyprctl -q keyword cursor:zoom_factor $(hyprctl getoption cursor:zoom_factor -j | jq '(.float * 0.5) | if . < 1 then 1 else . end')"
+
         "SUPER, Return, exec, ydotool key 125:0 && sleep 0.1 && ydotool click C0"
 
         "SUPER, m, movetoworkspacesilent, special"
