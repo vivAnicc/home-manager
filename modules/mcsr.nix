@@ -6,8 +6,4 @@
     # pkgs.graalvmPackages.graalvm-oracle
     pkgs.jemalloc
   ];
-
-  imports = [
-    ./waywall.nix
-  ];
 }

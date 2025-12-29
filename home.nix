@@ -25,7 +25,6 @@
     modules/wofi.nix
     modules/xdg.nix
     modules/zellij.nix
-    # modules/zig.nix
   ];
 
   # targets.genericLinux.enable = true;
