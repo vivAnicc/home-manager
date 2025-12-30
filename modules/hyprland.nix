@@ -241,8 +241,8 @@
         ", XF86AudioPrev, exec, playerctl previous"
       ];
 
-      bindn = [
-        ", r, sendshortcut, f3, title:Minecraft"
+      bindni = [
+        ", r, sendshortcut, , f3, title:^Minecraft.*"
       ];
 
       bindm = [
