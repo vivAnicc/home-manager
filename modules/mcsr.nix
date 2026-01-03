@@ -5,6 +5,6 @@
     pkgs.prismlauncher
     # pkgs.graalvmPackages.graalvm-oracle
     pkgs.jemalloc
-    pkgs.inotify-tools
+    pkgs.input-remapper
   ];
 }

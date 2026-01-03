@@ -241,9 +241,9 @@
         ", XF86AudioPrev, exec, playerctl previous"
       ];
 
-      bindni = [
-        ", r, sendshortcut, , f3, title:^Minecraft.*"
-      ];
+      # bindni = [
+      #   ", r, sendshortcut, , f3, title:^Minecraft.*"
+      # ];
 
       bindm = [
         "SUPER, mouse:272, movewindow"
