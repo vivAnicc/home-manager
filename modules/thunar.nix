@@ -2,10 +2,10 @@
 
 {
   home.packages = [
-    (pkgs.xfce.thunar.override {
+    (pkgs.thunar.override {
       thunarPlugins = [
-        pkgs.xfce.thunar-volman
-        pkgs.xfce.thunar-archive-plugin
+        pkgs.thunar-volman
+        pkgs.thunar-archive-plugin
       ];
     })
   ];
