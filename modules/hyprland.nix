@@ -271,7 +271,7 @@
 
         "SUPER_SHIFT, q, exit,"
 
-        # "SUPER, r, exec, set-wallpaper silksong && killall .waybar-wrapped && waybar"
+        "SUPER, r, exec, killall .waybar-wrapped; waybar"
 
         "SUPER, f11, fullscreen"
 
@@ -333,6 +333,8 @@
 
         "SUPER, d, killactive"
         "SUPER_SHIFT, d, forcekillactive"
+
+        "SUPER, a, exec, if pgrep waybar; then killall .waybar-wrapped; else waybar; fi"
 
         "SUPER, w, exec, $terminal"
 #TODO: move this in a script, so you can abort if you hit escape (returns empty)
