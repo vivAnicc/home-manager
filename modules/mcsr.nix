@@ -5,5 +5,6 @@
     pkgs.prismlauncher
     pkgs.jemalloc
     pkgs.grim
+    pkgs.waywall
   ];
 }
