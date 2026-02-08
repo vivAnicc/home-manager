@@ -199,7 +199,7 @@
 
         follow_mouse = 1;
 
-        sensitivity = -0.9; # -1.0 - 1.0, 0 means no modification.
+        sensitivity = 0; # -1.0 - 1.0, 0 means no modification.
         accel_profile = "flat";
 
         numlock_by_default = true;
