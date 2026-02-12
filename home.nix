@@ -25,6 +25,7 @@
     modules/wofi.nix
     modules/xdg.nix
     modules/zellij.nix
+    modules/music.nix
 
     modules/mcsr.nix
   ];
