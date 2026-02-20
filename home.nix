@@ -53,6 +53,7 @@
     pkgs.yt-dlp
     pkgs.nix
     pkgs.less
+    pkgs.chatterino7
 
     inputs.copy-paste.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
