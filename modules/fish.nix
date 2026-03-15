@@ -6,6 +6,7 @@
     pkgs.fzf
     pkgs.bitwarden-cli
     pkgs.jp
+    pkgs.bs
     inputs.nix-your-shell.packages."${pkgs.stdenv.hostPlatform.system}".nix-your-shell
     (
      pkgs.writeShellScriptBin "lights-off" #bash
@@ -21,15 +22,10 @@
 
     shellAbbrs = {
       v = "nvim";
-      m = "${pkgs.bc}/bin/bc -q";
+      m = "bc -q";
 
       la = "ls -A";
 			"-" = "cd -";
-
-      nd = "cd /etc/nixos";
-      ngc = "sudo nix-collect-garbage -d";
-      nbs = "nixos-rebuild switch --sudo";
-			nbr = "nixos-rebuild repl";
 
       hd = "cd ~/.config/home-manager";
       hm = "home-manager";
@@ -41,7 +37,6 @@
       };
       gca = "git commit --amend --no-edit";
 
-			tc = "rm -rvf /home/nick/temp; mkdir -vp /home/nick/temp";
 			td = "cd /home/nick/temp";
     };
     functions = {

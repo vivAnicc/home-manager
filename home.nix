@@ -26,8 +26,8 @@
     modules/xdg.nix
     modules/zellij.nix
     modules/music.nix
-
     modules/mcsr.nix
+    modules/gpu-screen-recorder.nix
   ];
 
   # targets.genericLinux.enable = true;
