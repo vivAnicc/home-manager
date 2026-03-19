@@ -346,7 +346,7 @@
         "SUPER, o, exec, wofi -n --show run"
         "SUPER, p, exec, $terminal -e nvim"
 
-        "SUPER, v, togglesplit"
+        "SUPER, v, layoutmsg, togglesplit"
         "SUPER, f, togglefloating"
       ];
 
