@@ -9,15 +9,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     
-    ghostty = {
-      url = "github:ghostty-org/ghostty";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    ghostty.url = "github:ghostty-org/ghostty";
 
-    hyprland = {
-      url = "github:hyprwm/Hyprland";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    hyprland.url = "github:hyprwm/Hyprland";
     
     zen-browser = {
       url = "github:youwen5/zen-browser-flake";
