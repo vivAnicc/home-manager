@@ -44,6 +44,8 @@
       url = "github:vivAnicc/copy-paste";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    dmodman.url = "github:vivAnicc/dmodman-flake";
   };
 
   outputs =
