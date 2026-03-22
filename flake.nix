@@ -45,7 +45,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    dmodman.url = "github:vivAnicc/dmodman-flake";
+    amethyst.url = "github:vivAnicc/amethyst-flake";
   };
 
   outputs =
