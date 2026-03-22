@@ -6,6 +6,7 @@
     pkgs.r2modman
     pkgs.owmods-cli
     pkgs.heroic
+    pkgs.protontricks
 
     inputs.amethyst.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
