@@ -286,6 +286,8 @@
 
         "SUPER, c, exec, nordvpn countries | tr -s ' ' '\\n' | sed 's/$/\\nnone/' | sort | uniq | wofi -d -i | xargs nordvpn connect"
 
+        "SUPER, t, exec, xdg-open ${../assets/trunic-cheat-sheet.jpg}"
+
         "SUPER, Backspace, exec, hyprlock"
 
         "SUPER, h, movefocus, l"
