@@ -7,6 +7,7 @@
     pkgs.owmods-cli
     pkgs.heroic
     pkgs.protontricks
+    pkgs.olympus
 
     inputs.amethyst.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
