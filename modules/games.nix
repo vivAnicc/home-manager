@@ -8,6 +8,7 @@
     pkgs.heroic
     pkgs.protontricks
     pkgs.olympus
+    pkgs.satisfactorymodmanager
 
     inputs.amethyst.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
