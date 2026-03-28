@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, stable-pkgs, config, ... }:
 
 {
   home.packages = [
@@ -19,7 +19,7 @@
 
   programs.qutebrowser = {
     enable = true;
-    package = pkgs.qutebrowser.overrideAttrs {
+    package = (stable-pkgs.qutebrowser.override { enableVulkan = false; }).overrideAttrs {
       postInstall = # bash
       ''
         sed --in-place \

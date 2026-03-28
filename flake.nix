@@ -2,7 +2,11 @@
   description = "Home Manager configuration of nick";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+    nixpkgs-stable.url = "github:nixos/nixpkgs/25.11";
+
+    nixgl.url = "github:nix-community/nixGL";
+
     utils.url = "github:vivAnicc/nix-utils";
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -52,6 +56,7 @@
     { nixpkgs, home-manager, utils, ... }@inputs: 
     let
       system = "x86_64-linux";
+      stable-pkgs = import nixpkgs { inherit system; };
       pkgs = import nixpkgs {
         inherit system;
         config = {
@@ -67,15 +72,7 @@
 
           modules = [ ./home.nix ];
 
-          extraSpecialArgs = {inherit inputs utils;};
-        };
-
-        mcsr = home-manager.lib.homeManagerConfiguration {
-          inherit pkgs;
-
-          modules = [ ./mcsr.nix ];
-
-          extraSpecialArgs = {inherit inputs utils;};
+          extraSpecialArgs = {inherit inputs utils stable-pkgs;};
         };
       };
     };
