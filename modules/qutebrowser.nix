@@ -1,4 +1,4 @@
-{ pkgs, stable-pkgs, config, ... }:
+{ pkgs, stable-pkgs, ... }:
 
 {
   home.packages = [
@@ -19,14 +19,15 @@
 
   programs.qutebrowser = {
     enable = true;
-    package = (stable-pkgs.qutebrowser.override { enableVulkan = false; }).overrideAttrs {
-      postInstall = # bash
-      ''
-        sed --in-place \
-          's/qutebrowser --untrusted-args/qutebrowser --target window --untrusted-args/' \
-          $out/share/applications/org.qutebrowser.qutebrowser.desktop
-      '';
-    };
+    package = null;
+    # package = (stable-pkgs.qutebrowser.override { enableVulkan = false; }).overrideAttrs {
+    #   postInstall = # bash
+    #   ''
+    #     sed --in-place \
+    #       's/qutebrowser --untrusted-args/qutebrowser --target window --untrusted-args/' \
+    #       $out/share/applications/org.qutebrowser.qutebrowser.desktop
+    #   '';
+    # };
 
     extraConfig = #python
     ''

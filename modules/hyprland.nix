@@ -98,6 +98,7 @@
         "swaync"
         "keyctl link @u @s"
         "${pkgs.hyprpaper}/bin/hyprpaper"
+        "qutebrowser --nowindow"
         # "nordvpn connect italy"
       ];
 
