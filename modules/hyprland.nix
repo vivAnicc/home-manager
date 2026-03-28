@@ -85,7 +85,7 @@
 
       "$terminal" = "ghostty";
       "$fileManager" = "fish -c 'term explorer'";
-      "$browser" = "qutebrowser";
+      "$browser" = "qutebrowser --target window";
       "$menu" = "wofi -n -i --show drun";
 
       cursor = {
