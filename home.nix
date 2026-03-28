@@ -3,6 +3,7 @@
 {
   imports = [
     modules/nvidia.nix
+    modules/scripts.nix
 
     modules/c.nix
     modules/choose-dir.nix
