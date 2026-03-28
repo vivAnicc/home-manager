@@ -2,6 +2,8 @@
 
 {
   imports = [
+    modules/nvidia.nix
+
     modules/c.nix
     modules/choose-dir.nix
     modules/distrobox.nix
@@ -29,16 +31,6 @@
     modules/mcsr.nix
     modules/gpu-screen-recorder.nix
   ];
-
-  # targets.genericLinux.enable = true;
-  targets.genericLinux = {
-    enable = true;
-    gpu.nvidia = {
-      enable = true;
-      version = "590.48.01";
-      sha256 = "sha256-ueL4BpN4FDHMh/TNKRCeEz3Oy1ClDWto1LO/LWlr1ok=";
-    };
-  };
 
   home.packages = [
     pkgs.file
