@@ -31,6 +31,7 @@
     modules/music.nix
     modules/mcsr.nix
     modules/gpu-screen-recorder.nix
+    modules/nh.nix
   ];
 
   home.packages = [
