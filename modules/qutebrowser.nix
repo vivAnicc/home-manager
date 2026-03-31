@@ -29,6 +29,11 @@
     #   '';
     # };
 
+    greasemonkey = let
+      mkPkgs = name: pkgs.writeText name (builtins.readFile (../assets/greasemonkey + ("/" + name)));
+      files = builtins.map mkPkgs (builtins.attrNames (builtins.readDir ../assets/greasemonkey));
+    in files;
+
     extraConfig = #python
     ''
       import catppuccin
