@@ -19,15 +19,15 @@
 
   programs.qutebrowser = {
     enable = true;
-    package = null;
-    # package = (stable-pkgs.qutebrowser.override { enableVulkan = false; }).overrideAttrs {
-    #   postInstall = # bash
-    #   ''
-    #     sed --in-place \
-    #       's/qutebrowser --untrusted-args/qutebrowser --target window --untrusted-args/' \
-    #       $out/share/applications/org.qutebrowser.qutebrowser.desktop
-    #   '';
-    # };
+    # package = null;
+    package = (stable-pkgs.qutebrowser.override { enableVulkan = false; }).overrideAttrs {
+      postInstall = # bash
+      ''
+        sed --in-place \
+          's/qutebrowser --untrusted-args/qutebrowser --target window --untrusted-args/' \
+          $out/share/applications/org.qutebrowser.qutebrowser.desktop
+      '';
+    };
 
     greasemonkey = let
       mkPkgs = name: pkgs.writeText name (builtins.readFile (../assets/greasemonkey + ("/" + name)));
