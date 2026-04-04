@@ -26,6 +26,7 @@
         sed --in-place \
           's/qutebrowser --untrusted-args/qutebrowser --target window --untrusted-args/' \
           $out/share/applications/org.qutebrowser.qutebrowser.desktop
+        ln -s /usr/bin/qutebrowser $out/bin/qutebrowser
       '';
     };
 
