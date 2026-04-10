@@ -26,6 +26,7 @@
         sed --in-place \
           's/qutebrowser --untrusted-args/qutebrowser --target window --untrusted-args/' \
           $out/share/applications/org.qutebrowser.qutebrowser.desktop
+        rm $out/bin/qutebrowser
         ln -s /usr/bin/qutebrowser $out/bin/qutebrowser
       '';
     };
@@ -55,6 +56,9 @@
     };
 
     settings = {
+# Workaround to fix flickering
+      qt.force_software_rendering = "chromium";
+
       colors.webpage = {
         darkmode = {
           algorithm = "lightness-cielab";
