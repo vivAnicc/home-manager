@@ -39,11 +39,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     
-    # nixvim = {
-    #   url = "github:nix-community/nixvim";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
-    
+    clip = {
+      url = "github:vivAnicc/clip";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     copy-paste = {
       url = "github:vivAnicc/copy-paste";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -67,6 +67,14 @@
     in
     {
       homeConfigurations = {
+        droid = home-manager.lib.homeManagerConfiguration {
+          inherit pkgs;
+
+          modules = [ ./android.nix ];
+
+          extraSpecialArgs = {inherit inputs utils stable-pkgs;};
+        };
+
         nick = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
 
