@@ -40,7 +40,7 @@
     pkgs.gnome-themes-extra
     pkgs.bitwarden-desktop
     pkgs.thunderbird
-    pkgs.wine
+    pkgs.wine64
     pkgs.comma
     pkgs.evince
     pkgs.prismlauncher
