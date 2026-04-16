@@ -223,6 +223,7 @@
         "match:class .*, suppress_event maximise"
         "match:class ^$, match:title ^$, match:xwayland 1, match:float 1, match:fullscreen 0, match:pin 0, no_focus on"
         "match:workspace w[t1], border_size 0"
+        "match:class wofi, decorate off"
       ];
 
       # windowrulev2 = [
