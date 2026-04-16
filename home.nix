@@ -32,6 +32,7 @@
     modules/mcsr.nix
     modules/gpu-screen-recorder.nix
     modules/nh.nix
+    modules/feh.nix
   ];
 
   home.packages = [
