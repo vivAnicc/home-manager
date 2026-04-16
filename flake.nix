@@ -54,20 +54,19 @@
 
   outputs =
     { nixpkgs, home-manager, utils, ... }@inputs: 
-    let
-      system = "x86_64-linux";
-      stable-pkgs = import nixpkgs { inherit system; };
-      pkgs = import nixpkgs {
-        inherit system;
-        config = {
-          allowUnfree = true;
-          nvidia.acceptLicense = true;
-        };
-      };
-    in
     {
       homeConfigurations = {
-        droid = home-manager.lib.homeManagerConfiguration {
+        droid = let
+          system = "aarch64-linux";
+          stable-pkgs = import nixpkgs { inherit system; };
+          pkgs = import nixpkgs {
+            inherit system;
+            config = {
+              allowUnfree = true;
+              nvidia.acceptLicense = true;
+            };
+          };
+        in home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
 
           modules = [ ./android.nix ];
@@ -75,7 +74,17 @@
           extraSpecialArgs = {inherit inputs utils stable-pkgs;};
         };
 
-        nick = home-manager.lib.homeManagerConfiguration {
+        nick = let
+          system = "x86_64-linux";
+          stable-pkgs = import nixpkgs { inherit system; };
+          pkgs = import nixpkgs {
+            inherit system;
+            config = {
+              allowUnfree = true;
+              nvidia.acceptLicense = true;
+            };
+          };
+        in home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
 
           modules = [ ./home.nix ];

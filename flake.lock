@@ -69,6 +69,26 @@
         "type": "github"
       }
     },
+    "clip": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1756390717,
+        "narHash": "sha256-KOWYx1llusaAKS5uaE8sCRJ5f/Vk2UqUN2vcIyJJZXc=",
+        "owner": "vivAnicc",
+        "repo": "clip",
+        "rev": "7d5fb87308aaf6123d88f96f847ca4590284e2ef",
+        "type": "github"
+      },
+      "original": {
+        "owner": "vivAnicc",
+        "repo": "clip",
+        "type": "github"
+      }
+    },
     "copy-paste": {
       "inputs": {
         "nixpkgs": [
@@ -1121,6 +1141,7 @@
     "root": {
       "inputs": {
         "amethyst": "amethyst",
+        "clip": "clip",
         "copy-paste": "copy-paste",
         "ghostty": "ghostty",
         "home-manager": "home-manager_2",
