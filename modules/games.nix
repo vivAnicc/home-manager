@@ -9,6 +9,7 @@
     pkgs.protontricks
     pkgs.olympus
     pkgs.satisfactorymodmanager
+    pkgs.rpcs3
 
     inputs.amethyst.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
