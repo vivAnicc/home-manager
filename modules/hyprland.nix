@@ -312,6 +312,11 @@
         "SUPER_SHIFT, k, movewindow, u"
         "SUPER_SHIFT, j, movewindow, d"
 
+	"SUPER_ALT, h, resizeactive, -50% 0"
+	"SUPER_ALT, l, resizeactive, 50% 0"
+	"SUPER_ALT, k, resizeactive, 0 -50%"
+	"SUPER_ALT, j, resizeactive, 0 50%"
+
         "SUPER_CTRL, h, movetoworkspacesilent, -1"
         "SUPER_CTRL, l, movetoworkspacesilent, +1"
         "SUPER_CTRL, left, movetoworkspacesilent, -1"
