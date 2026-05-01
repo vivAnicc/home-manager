@@ -18,6 +18,7 @@
       window-inherit-working-directory = false;
 
       theme = "Catppuccin Mocha";
+      scrollbar = "never";
 
       focus-follows-mouse = true;
 
