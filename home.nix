@@ -33,6 +33,7 @@
     modules/gpu-screen-recorder.nix
     modules/nh.nix
     modules/feh.nix
+    modules/twitch.nix
   ];
 
   home.packages = [
