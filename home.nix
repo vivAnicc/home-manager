@@ -34,6 +34,7 @@
     modules/nh.nix
     modules/feh.nix
     modules/twitch.nix
+    modules/youtube.nix
   ];
 
   home.packages = [
