@@ -849,11 +849,11 @@
         "utils": "utils_5"
       },
       "locked": {
-        "lastModified": 1777046473,
-        "narHash": "sha256-eP3+E/Alg/2bZyFrPRQgGc/vZ1nKSNmrZkmknbh/N0o=",
+        "lastModified": 1777756212,
+        "narHash": "sha256-sXYTp2hVuhYAteLhSo7P1nwnWjBCAUfOZjHr0/q8TEM=",
         "owner": "vivAnicc",
         "repo": "neovim-nvf",
-        "rev": "a358275c2d268ae31dc6f3556e44a22e21135c35",
+        "rev": "af170d9a72c6a7cb3695c8260aab8234d9b22933",
         "type": "github"
       },
       "original": {
@@ -1482,11 +1482,11 @@
         "nvf": "nvf"
       },
       "locked": {
-        "lastModified": 1777651129,
-        "narHash": "sha256-mTLN7zwZ7YaT2EKcnvWkSY96LK7qyOOiSanoY1tNLWw=",
+        "lastModified": 1777756275,
+        "narHash": "sha256-QOe4O5BXCbPJmGTRFhavhXB29B0tl4UaUajXDrAUwAo=",
         "owner": "vivAnicc",
         "repo": "nix-utils",
-        "rev": "a95f3415a7f976a53b99e02ead8b24e51b4fd6a7",
+        "rev": "5f392c11b7810dd191e898a67dec587e2a82f2b7",
         "type": "github"
       },
       "original": {
