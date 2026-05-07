@@ -50,6 +50,7 @@
     pkgs.nix
     pkgs.less
     pkgs.chatterino7
+    pkgs.qrcp
 
     inputs.copy-paste.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];

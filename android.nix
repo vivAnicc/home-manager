@@ -21,6 +21,7 @@
     pkgs.yt-dlp
     pkgs.less
     pkgs.wget
+    pkgs.qrcp
 
     inputs.copy-paste.packages.${pkgs.stdenv.hostPlatform.system}.default
  #   inputs.clip.packages.${pkgs.stdenv.hostPlatform.system}.default
