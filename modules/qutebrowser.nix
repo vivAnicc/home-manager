@@ -99,6 +99,7 @@
     perDomainSettings = {
       "git.suyu.dev".content.javascript.clipboard = "access-paste";
       "github.com".content.javascript.clipboard = "access-paste";
+      "codeberg.org".content.javascript.clipboard = "access-paste";
 
       "www.youtube.com".content.notifications.enabled = false;
       "about:blank".colors.webpage.darkmode.enabled = false;
